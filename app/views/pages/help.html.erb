@@ -1,0 +1,72 @@
+    <style>
+        body {
+            background: linear-gradient( /* somewhat transparent film on top of the BG to make it look darker. */
+                rgba(0,0,0, 0.7),
+                rgba(0,0,0, 0.7)
+                ), url("/bg.jpg") no-repeat center center fixed
+            
+            ; /* only display once, center horizontal and vertical, dont let scroll change position. */
+            -webkit-background-size: cover;
+            -moz-background-size: cover; /* cover the whole html element. */
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        h1 {
+            color: white;
+            font-weight: bold;
+        }
+        .container-index {
+            margin-right: 15%;
+            margin-left: 15%;
+        }
+        .text {
+            color: white;
+            font-weight: 300;
+            font-size: 150%;
+        }
+        .footer-links {
+            text-align: center;
+            color: white;
+            margin-top: 30%;
+            font-size: 75%;
+        }
+        .log-in {
+            float: right;
+            width: 300px;
+            height: 150px;
+            margin-top: 7.5%;
+        }
+        .sign-up {
+            float: right;
+            width: 300px;
+            height: 250px;
+        }
+        .log-in-form {
+            margin: 5px;
+        }
+    </style>
+    
+    <div class="container-index row">
+        <div class="col-sm-6">
+            <h1>Need Help?</h1>
+            <p class="text">
+                First,if you never went on this site before,this means you don't have an account!<br>
+                To Create An account You Need To Press The Blue Sign Up Button.<br>
+                On The Other Hand If You Have an Account Log In By Using The Log In Blue Button.
+            </p>
+            <p class="text">
+                But If You Are Logged in And your lost!<br>
+                Then You will be happy!<br>
+                Because This Site Is Based On Twitter Wich means any tutorials for twitter are for this Website!
+            </p>
+        </div>
+        <div class="col-sm-6">
+            <li><%= link_to("Log In",new_user_session_path) %></li>
+            <li><%= link_to("Sign Up",new_user_registration_path) %></li>
+        </div>
+        
+        <div class="col-sm-12">
+            <p class="footer-links">About  Help  Blog  Status  Jobs  Terms  Privacy  Cookies  Ads  info  Brand  Advertise  Businesses  Media  Developers  Directory 2016 TheDevProject</p>
+        </div>
+        
+    </div>

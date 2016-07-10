@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TheDevGroup</title>
+  <title>TheGroup</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 <%= render '/layouts/nav' %>
-<div class ="container">
-    <spam class="notice"><%= notice %></spam>
-    <spam class="alert"><%= alert %></spam>
-    <%= yield %> 
-</div>
 
+<% if params[:id] != nil %>
+  <% @url = '/user/' + params[:id] %>
+  <% if current_page?(@url) %>
+    <img src="/banner.jpg" class="profile-banner">
+  <% end %>
+<% end %>
+
+<div class="container">
+  <span class="notice"><%= notice %></span>
+  <span class="alert"><%= alert %></span>
+  
+  <%= yield %>
+  
+</div>
 
 </body>
 </html>

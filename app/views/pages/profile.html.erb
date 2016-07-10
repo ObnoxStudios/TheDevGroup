@@ -1,43 +1,33 @@
-<div class = "row">
-    <div class = "col-xs-12">
-        <div class="jumbotron">
-            Header
-        </div>
-    </div>
-</div>
+
 <!-- begin row 2. -->
 <div class = "row">
-    <div class = "col-xs-3">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <p>Profile</p>
-          </div>
-        </div>
+    <div class="col-xs-3">
+      <div class="col-sm-12" style="margin-top: -200px;">
+            <img src="/avatar1.jpg" height="200px" width="200px" class="rounded-img">
+      </div>
     </div>
     <div class = "col-xs-6">
-        <div class="panel panel-default">
+      <%= render '/components/post_form' %><br><br>
+      <% for @p in @posts %>
+        <div class="panel panel-default post-panel">
           <div class="panel-body">
-            <p>Tweets</p>
+            <div class="col-sm-1">
+              <img src="/avatar1.jpg" class="rounded-img" height="50px" width="50px"></img>
+            </div>
+            <div class="col-sm-11">
+              <p class="post-title"><span class="post-owner"><a href="/user/<%= User.find(@p.user_id).username %>"><%= User.find(@p.user_id).username %></a></span> <span class="post-creation">- <%= @p.created_at.to_formatted_s(:short) %></span></p>
+              <p class="post-content"><%= @p.content %></p>
+            </div>
           </div>
         </div>
-    </div>
-    <div class = "col-xs-3">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <p>Who to Follow</p>
-          </div>
+      <% end %>
+      <div class="panel panel-default post-panel">
+      <div class="panel-body row">
+        <div class="col-sm-12">
+          <a href="#top"><p class="opacity: .7;">Back to top <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span></p></a></center>
         </div>
+      </div>
     </div>
-</div> 
-<!-- begin row 2. -->
-<div class = "row">
-    <div class = "col-xs-3">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <p>Trends</p>
-          </div>
-        </div>
     </div>
-</div> 
 
-
+</div> 

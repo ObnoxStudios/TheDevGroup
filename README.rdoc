@@ -1,6 +1,6 @@
 Hello.
 For Opening the project you can just clone it to your github account and open it in cloud 9.
-Unfortanetly, i can not help you currently with openning it in the ruby on rails standalone scince i do not
+Unfortanetly, i can not help you currently with openning it in the ruby on rails standalone since i do not
 use that.Until then there are plenty of tutorials.And This Project is OpenSource for your use as long as the word TheGroup
 is not located in your project.
 
